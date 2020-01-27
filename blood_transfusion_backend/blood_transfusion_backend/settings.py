@@ -80,6 +80,19 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#    'default': {
+#        'ENGINE': "sql_server.pyodbc",
+#        'HOST': "127.0.0.1,1433",
+#     #    'USER': "dblab",
+#     #    'PASSWORD': "fV5S7H3jt247",
+#        'NAME': "BloodTransfusion",
+#        'OPTIONS': {
+#            'Trusted_Connection': 'yes'
+#        },
+#    }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
