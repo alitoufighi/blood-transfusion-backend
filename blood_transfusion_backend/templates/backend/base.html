@@ -1,24 +1,107 @@
-{% load static %}
+<!-- {% load static %} -->
 <html>
     <head>
         <title>سازمان انتقال خون</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"> -->
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">سازمان انتقال خون کشور</a></h1>
-        </div>
+        <!-- <link rel="stylesheet" href="{% static 'css/blog.css' %}"> -->
+        <style>
+            @font-face {
+                font-family: IRANSans;
+                src: url("https://morteza-karimi.ir/gentelella-rtl/build/fonts/eot/IRANSansWeb_Black.eot") format("embedded-opentype"), url("https://morteza-karimi.ir/gentelella-rtl/build/fonts/woff2/IRANSansWeb_Light.woff2") format("woff2"), url("https://morteza-karimi.ir/gentelella-rtl/build/fonts/woff/IRANSansWeb_Light.woff") format("woff"), url("https://morteza-karimi.ir/gentelella-rtl/build/fonts/ttf/IRANSansWeb_Light.ttf") format("truetype");
+                font-weight: 300;
+            }
+            .container {
+            max-width: 960px;
+            }
 
-        <div class="content container">
+            .border-top { border-top: 1px solid #e5e5e5; }
+            .border-bottom { border-bottom: 1px solid #e5e5e5; }
+            .border-top-gray { border-top-color: #adb5bd; }
+
+            .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+            .lh-condensed { line-height: 1.25; }
+
+        </style>
+    </head>
+    <body class="bg-light">
+        <div class="container" style="font-family:IRANSans;">
+            <div class="page-header text-center">
+                <h1><a href="/">سازمان انتقال خون کشور</a></h1>
+            </div>  
+    
             <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                    {% endblock %}
+                <div class="col-md-3 order-md-2 mb-4" dir='rtl'>
+                  <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">لیست گزارش‌ها</span>
+                  </h4>
+                  <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                        <h6 class="my-0">لیست اعلام نیازهای</h6>
+                        <small class="text-muted">Brief description</small>
+                      </div>
+                      <span class="text-muted">$12</span>
+                    </li>
+                  </ul>
+                  
+                  <hr>
+
+                  <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">لیست فرم‌ها</span>
+                  </h4>
+                  <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                        <h6 class="my-0"><a href="/healthTest">تست سلامت</a></h6>
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                          <h6 class="my-0"><a href="/newDonor">افزودن اهداگر جدید</a></h6>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+        
+    
+            <!-- <div class="container-fluid">
+                <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">Overview</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Export</a></li>
+                </ul>
+            </div> -->
+    
+            
+    
+            <div class="col-md-9 order-md-1" dir=rtl>
+                <div class="row">
+                    <div class="col-md-8">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
                 </div>
             </div>
+
+            <!-- <div class="col-md-3 order-md-1" dir=rtl>
+                <div class="row">
+                    <p>Salam</p>
+                </div>
+            </div> -->
+
         </div>
+        
     </body>
 </html>

@@ -1,0 +1,39 @@
+{% extends 'backend/base.html' %}
+
+{% block content %}
+{% if message %}
+<p style="color:red;">{{ message }}</p>
+{% endif %}
+
+    <div>
+        <h4 class="mb-3">
+            جستجوی اهداگر
+        </h4>
+        <form class="card p-2" method="get" action="/donor">
+            <div class="input-group">
+                <input type="text" dir='ltr' class="form-control" placeholder="کد ملی" name="national_id">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary">جستجو</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h4 class="mb-3">
+            جستجوی فرآورده‌های خونی مورد اضطرار در شهر
+        </h4>
+        <form class="card p-2" method="get" action="/necessaryBloodProductsInCity">
+            <div class="input-group">
+                <input type="text" dir='ltr' class="form-control" placeholder="نام شهر" name="city_name">
+                <input type="text" dir='ltr' class="form-control" placeholder="گروه خونی" name="blood_type">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary">جستجو</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    
+    
+{% endblock %}

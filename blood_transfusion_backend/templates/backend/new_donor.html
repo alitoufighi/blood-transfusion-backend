@@ -1,0 +1,28 @@
+{% extends 'backend/base.html' %}
+
+{% block content %}
+    {% if message %}
+        <p style="color:red;">{{ message }}</p>
+    {% endif %}
+
+    <div>
+        <h4 class="mb-3">
+            افزودن اهداگر جدید
+        </h4>
+        <form class="card p-2" method="POST" action="/newDonor">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="text" dir='ltr' class="form-control" placeholder="کد ملی" name="nationalId">
+                <input type="text" dir='ltr' class="form-control" placeholder="نام" name="firstName">
+                <input type="text" dir='ltr' class="form-control" placeholder="نام خانوادگی" name="lastName">
+                <input type="text" dir='ltr' class="form-control" placeholder="گروه خونی" name="bloodType">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary">افزودن</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    
+    
+{% endblock %}
