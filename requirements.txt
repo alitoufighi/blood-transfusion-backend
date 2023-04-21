@@ -1,5 +1,5 @@
-﻿Django==2.2.24
+Django==2.2.24
 django-mssql-backend==2.6.0
 pyodbc==4.0.27
 pytz==2019.3
-sqlparse==0.3.0
+sqlparse==0.4.4
